@@ -42,6 +42,14 @@ INSTALLED_APPS = [
     'users',
 ]
 
+# Example for your Render deployment
+CSRF_TRUSTED_ORIGINS = [
+    "https://tripmate-7e5p.onrender.com",
+    # If you have a custom domain, add it here too:
+    # "https://www.yourcustomdomain.com",
+]
+
+
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
