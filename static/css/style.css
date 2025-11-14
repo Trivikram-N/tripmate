@@ -1,0 +1,220 @@
+
+
+body {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    /* padding for the whole section */
+    background: rgba(0, 0, 0, 0.4);
+    /* semi-transparent overlay */
+    color: #f9f8f6;
+    /* default color for text inside hero */
+}
+
+/* Glow only on H1 */
+.hero h1 {
+    color: #f9f8f6;
+    /* bright color for glow */
+    text-shadow: 0 0 5px #8becf9,
+        0 0 10px #7e57ff,
+        0 0 20px #1779c4,
+        0 0 30px #3a8e88;
+    animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 5px #ff5757,
+            0 0 10px #ce9128,
+            0 0 20px #95ff57,
+            0 0 30px #57ff8c;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #5792ff,
+            0 0 20px #53a7a1,
+            0 0 30px #9757ff,
+            0 0 40px #ff57fc;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #49b4b0,
+            0 0 10px #7657ff,
+            0 0 20px #57ffe0,
+            0 0 30px #ffdd57;
+    }
+}
+
+/* Paragraph style stays below H1 */
+.hero p.lead {
+    font-size: 1.3rem;
+    /* slightly bigger */
+    color: #f0f0f0;
+    /* lighter color for contrast */
+    margin-top: 20px;
+}
+
+
+.intro img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 5px rgba(239, 237, 230, 0.7);
+    /* golden glow */
+    transition: box-shadow 0.3s ease-in-out;
+    animation: glow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px 2px rgba(27, 182, 213, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 25px 8px rgba(70, 139, 180, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 10px 2px rgba(77, 149, 180, 0.5);
+    }
+}
+
+/* Intro Section Styles */
+.intro h2 {
+    font-weight: 900;
+    /* Makes the title bold */
+    font-size: 2.2rem;
+    /* Slightly bigger than default */
+    color: #f9f8fc;
+    /* Golden/yellow to contrast background */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    /* subtle shadow for readability */
+}
+
+.intro p {
+    font-size: 1.2rem;
+    /* Bigger paragraph text */
+    color: #0d0d0d;
+    /* Light color for better readability on background */
+    line-height: 1.6;
+    /* Adds spacing between lines */
+    margin-bottom: 1rem;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.category-list label {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+    user-select: none;
+    transform: translateY(5px);
+}
+
+.category-list label:hover {
+    transform: translateY(0px);
+}
+
+.category-list input {
+    display: none;
+}
+
+.category-list input:checked+span {
+    background: #007bff;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 25rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card .card-body {
+    position: relative;
+    padding-right: 42px;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    color: gray;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.25s;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.like-btn.liked {
+    color: red;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffffff;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.navbar-brand img {
+    margin-right: 8px;
+}
+
+/* hide card column when filtered (we toggle display on parent .col element) */
+
+.travel-image {
+    width: 50px;
+    height: 50px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #0078ff !important;
+    text-shadow: 0 0 10px #0078ff;
+}
