@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mocezy1h4yiebogzfemdj2^b#iw__jk##rq^*i_1w35&p24oqy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -127,8 +127,6 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / "staticfiles"  # for deployment
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
 
 
 # Default primary key field type
