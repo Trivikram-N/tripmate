@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mocezy1h4yiebogzfemdj2^b#iw__jk##rq^*i_1w35&p24oqy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tripmate-7e5p.onrender.com']
+ALLOWED_HOSTS = ['tripmate-7e5p.onrender.com', 'Trivikram.pythonanywhere.com','*']
 
 
 # Application definition
@@ -45,6 +45,8 @@ INSTALLED_APPS = [
 # Example for your Render deployment
 CSRF_TRUSTED_ORIGINS = [
     "https://tripmate-7e5p.onrender.com",
+    'https://Trivikram.pythonanywhere.com',
+    'https://*',
 ]
 
 

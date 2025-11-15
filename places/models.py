@@ -40,4 +40,4 @@ class Attraction(models.Model):
     image = models.ImageField(upload_to='attractions/')
 
     def __str__(self):
-        return f"{self.name} ({self.place.title})"
+        return self.name
